@@ -1,26 +1,18 @@
-public class Student {
-    private  int stuid;
-    private  String phone;
+public class Student extends Users {
 
-    public int getStuid() {
-        return stuid;
+    public Student(String major, String phone) {
+        this.major = major;
+        this.phone = phone;
     }
 
-    public void setStuid(int stuid) {
-        String str=String.valueOf(stuid);
-        if (str.length()<10)
-        {
-            System.out.println("学号不足10位请重新输入");
-            return;
-        }
-        this.stuid = stuid;
+    private  String major;
+    private  String phone;
+
+    public String getMajor() {
+        return major;
     }
 
     public String getPhone() {
         return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 }
